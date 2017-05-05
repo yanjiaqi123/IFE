@@ -1,0 +1,148 @@
+
+
+
+/* test2 */
+body {
+	font-family: '微软雅黑';
+	background-color: #dedede;
+	margin: 0;
+}
+.nav {
+	
+	height: 60px;
+	background-color: #333;
+	overflow: hidden;
+	margin: 0px;
+}
+.nav .logo {
+	float: left;
+	width: 120px;
+	height: 40px;
+	margin: 10px 0 10px 40px;
+	background-image: url(./bd_logo1.png);
+} 
+.nav .nav_list {
+	float: right;	
+	margin: 10px 20px 10px 0;
+
+} 
+.nav_list li {
+	display: inline;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 5px;
+}
+.nav_list li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+table { 
+	border-collapse: collapse; 
+} 
+ol,ul { 
+	list-style: none; 
+}
+.container {
+	padding: 20px;
+	background-color: #dedede;
+	position: relative;
+}
+article {
+	background-color: #fff;
+	padding:30px 20px;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 2px #999;
+	overflow: hidden;
+}
+.subtitle,  .author{
+	color: #6f624f;
+}
+.main_text p {
+	text-indent: 2em;
+}
+.pic {
+	border: 1px solid #cbcbcb;
+	padding: 20px 10px 10px 10px;
+	 width: 100px;
+    height: 140px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    
+}
+.pic img{
+	width:100px;
+	height:100px;
+}
+.pic p {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.main_text table {
+	width: 100%;
+}
+.main_text table thead {
+	background: #333;
+	color: #fff;
+}
+.main_text table tfoot {
+	background: #ccc;
+	font-weight: bold;
+}
+.sidebar_title {
+	border-left: 4px solid #ccc;
+	padding-left:8px;
+}
+
+.text_field {
+	width: 400px;
+	margin: 30px auto;
+}
+.submit_field {
+	height: 40px;
+	background: blue;
+	width: 100%;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+}
+.form_info .text_field {
+	overflow: hidden;
+	margin-bottom :20px;
+}
+.form_info .form_group {
+	margin-bottom: 10px;
+}
+.form_info .form_group .group_name{
+	text-align: right;
+	width: 150px;
+	display: inline-block;
+}
+.form_info .form_group .group_value{
+	width: 240px;
+	display:inline-block;
+
+}
+.form_info .text_field p {
+	width:244px;
+	float: right;
+	color: #ccc;
+}
+.footer {
+	height: 70px;
+	color: #fff;
+	background-color: #000;
+	line-height: 70px;
+	text-align: center;
+}
+.sidebar{
+	position: absolute;
+	right: 20px;
+	top:20px;
+	width: 450px;
+}
+.content {
+	margin-right: 470px;
+}
