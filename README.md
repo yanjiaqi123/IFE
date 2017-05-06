@@ -1,7 +1,7 @@
 # IFE
 百度前端任务  添加中.....
 
-TASK 01
+TASK 01 HTML/CSS
 
 1.任务一：零基础HTML编码 
 
@@ -45,7 +45,7 @@ DEMO：https://yanjiaqi1996.github.io/IFE/task01/task01-08/index.html
 代码地址：https://github.com/yanjiaqi1996/IFE/blob/master/task01/task01-09;
 DEMO：https://yanjiaqi1996.github.io/IFE/task01/task01-09/index.html
 
-TASK 02
+TASK 02 JavaScript
 
 1.任务一：零基础JavaScript编码（一） 
 
@@ -62,3 +62,7 @@ TASK 02
 4.任务四：基础JavaScript练习（一） 
 
 代码地址：https://github.com/yanjiaqi1996/IFE/blob/master/task02/task02-04/index.html; DEMO：https://yanjiaqi1996.github.io/IFE/task02/task02-04/index.html
+
+4.任务五：基础JavaScript练习（二） 
+
+代码地址：https://github.com/yanjiaqi1996/IFE/blob/master/task02/task02-05/index.html; DEMO：https://yanjiaqi1996.github.io/IFE/task02/task02-05/index.html
