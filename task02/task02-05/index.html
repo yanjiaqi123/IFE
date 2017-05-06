@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务wu：基础JavaScript练习（一）</title>
+    <style>
+        li{
+            display:inline-block;
+            background-color: #cd4a48;
+            color: #f3f6f7;
+            font-size:20px;
+            text-align:center;
+            padding:5px;
+            margin:5px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inNum" name="number">
+    <button id="btnLeftIn">左侧入</button>
+    <button id="btnRightIn">右侧入</button>
+    <button id="btnLeftOut">左侧出</button>
+    <button id="btnRightOut">右侧出</button>
+    <!--数字队列-->
+    <ul id="outNum"></ul>
+    <button id="sort">排序</button>
+
+    <script type="text/javascript">
+        // 绑定变量
+        var inNum = document.getElementById("inNum");
+        var outNum = document.getElementById("outNum");
+        var btnLeftIn = document.getElementById("btnLeftIn");
+        var btnRightIn = document.getElementById("btnRightIn");
+        var btnLeftOut = document.getElementById("btnLeftOut");
+        var btnRightOut = document.getElementById("btnRightOut");
+        // 插入数字
+        function insert(direction) {
+            num =1;
+            var text = inNum.value;
+            if (!text || (text < 10) || (text > 100) || (isNaN(text))) {
+                alert("请输入10-100的数!");
+                return 0;
+            }
+            if (num > 60) {
+                alert("输入的元素已超过60个!");
+                return 0;
+            }else{
+                var oLi = document.createElement("li");
+                oLi.style.height = text +"px";
+                if(direction === "left"){ //点击左侧按钮插入
+                    outNum.insertBefore(oLi,outNum.firstChild);//将生成的li元素从前方放入
+                } else if(direction === "right"){ //点击右侧按钮插入
+                    outNum.appendChild(oLi);//将生成的li元素从末尾放入
+                }
+                num++;
+            }
+        }
+        // 删除数字
+        function del(node,direction){
+            if(outNum.childNodes.length<=0){
+                alert("不存在元素可以删除");
+                return false;
+            } else{
+                if(direction === "left"){  //点击左侧按钮删除
+                    alert("删除数字：" +outNum.firstChild.innerText +"！");
+                    outNum.removeChild(outNum.firstChild);
+                } else if(direction === "right"){  //点击右侧按钮删除
+                    alert("删除数字：" +outNum.lastChild.innerText +"！");
+                    outNum.removeChild(outNum.lastChild);
+                } else{ //点击li标签删除
+                    alert("删除数字：" +outNum.removeChild(node).innerText +"！");
+                }
+            }
+        }
+        //按钮
+        btnLeftIn.onclick = function(){insert("left");};
+        btnRightIn.onclick = function(){insert("right");};
+        btnLeftOut.onclick = function(){del(-1,"left");};
+        btnRightOut.onclick = function(){del(-1,"right");};
+        outNum.onclick = function(){del(event.target)};
+        var sortby = document.getElementById("sort");
+            sort.onclick = bubble_sort;
+        function bubble_sort() {
+            var box0 = document.getElementById("outNum");
+            var len = box0.childNodes.length;
+            if(len <= 1) {
+                return;
+            }
+            for(var i=0; i<len; i++){
+                for(var j=0; j<len-i-1; j++){
+                    (function(k){
+                        var box0 = document.getElementById("outNum");
+                        var nodes = box0.childNodes;
+                        var k0 = parseInt(nodes[k].style.height);
+                        var k1 = parseInt(nodes[k+1].style.height);
+                        if(k0 > k1) {                           
+                            nodes[k].style.height = k1 + "px";
+                            nodes[k].style.marginTop = (100 - k1) + "px";
+                            nodes[k+1].style.height = k0 + "px";
+                            nodes[k+1].style.marginTop = (100 - k0) + "px";                     
+                        }
+                    })(j);
+                }               
+            }
+        }
+    </script>
+</body>
+</html>
